@@ -1,12 +1,9 @@
 PageRank implementation using mrJOB
 ===================================
-##What is Pagerank?
+##What is [Pagerank](http://en.wikipedia.org/wiki/PageRank)?
 PageRank algorithm was created by the founders of Google and it serves as the backbone (underlying algorithm) of the Google search engine. It allocates a weight (a.k.a. pagerank) to every page that is crawled by the search engine. This weight is directly proportionate to the relevance given (to the associated page) by Google search - a page with a higher pagerank value is considered to be more relevant and is ranked higher in the searches. These weights are computed by iterations and each iteration's completion is contingent upon the number of pages involved - this bit would be more palpable from running the provided code. With the exceptionally large amount of data that needs to be crunched in order for this algorithm to work as desired, it is necessary to adopt a system which enables to do just that, in a time-efficient manner - [Hadoop](http://strata.oreilly.com/2011/01/what-is-hadoop.html) based implementation.
 
-References:
-
-1. [Really nice explanation of PageRank](http://pr.efactory.de/e-pagerank-algorithm.shtml)
-2. [Wiki](http://en.wikipedia.org/wiki/PageRank)
+[Really nice explanation of PageRank](http://pr.efactory.de/e-pagerank-algorithm.shtml)
 
 ##What is [mrJOB](https://github.com/Yelp/mrjob)?
 mrJOB is a Python package (created by Yelp) which can be used for writing [Hadoop streaming](http://hadoop.apache.org/docs/r1.1.2/streaming.html) jobs. It's a really neat / simple tool for writing map / reduce jobs in Python. I suppose you ought to have Python 2.5 and above to run this package. One can go about running tasks locally (i.e. on your machine) / on Hadoop (in pseudo-distributed mode / clustered mode) / on [Amazon's Elastic MapReduce](http://aws.amazon.com/elasticmapreduce/) very conveniently - by just changing couple of command line arguments!
