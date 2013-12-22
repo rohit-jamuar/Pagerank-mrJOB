@@ -67,8 +67,8 @@ From **Terminal**, run `python getMaxNode.py out`
 
 1.	python pageRank.py -r hadoop hdfs:////input --jobconf **mapred.map.tasks=numberOfMappers** --jobconf **mapred.reduce.tasks=numberOfReducers** > out
 	
-**e.g.** `python pageRank.py -r hadoop hdfs:////input --jobconf mapred.map.tasks=5 --jobconf mapred.reduce.tasks=10 > out`
+	**e.g.** python pageRank.py -r hadoop hdfs:////input --jobconf mapred.map.tasks=5 --jobconf mapred.reduce.tasks=10 > out
 	
 2. python pageRank.py -r hadoop hdfs:////input **--iterations=numberOfIterations** > out
 	
-**e.g.** `python pageRank.py -r hadoop hdfs:////input --iterations=5 > out`
+	**e.g.** python pageRank.py -r hadoop hdfs:////input --iterations=5 > out
