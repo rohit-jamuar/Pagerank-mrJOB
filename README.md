@@ -45,7 +45,7 @@ Data used for this experiment has been derived from [DBpedia](http://dbpedia.org
 
 3. From **Terminal**, run `python pageRank.py -r hadoop hdfs:////input >out`
 
-**To run code on Elastic MapReduce -**
+**To run experiment on Elastic MapReduce -**
 
 1. Ensure that you have the following : an AWS account setup, signed up for EMR service, EMR configuration file (on your system). [If not](http://pythonhosted.org/mrjob/guides/emr-quickstart.html#configuring-aws-credentials).
 
