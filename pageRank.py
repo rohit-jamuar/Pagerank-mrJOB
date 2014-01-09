@@ -19,14 +19,7 @@ class MRPageRank(MRJob):
             help='probability a web surfer will continue clicking on links')
 
     def map_task(self, node_id, node):
-        """Mapper: send score from a single node to other nodes.
-
-        Input: ``node_id, node``
-
-        Output:
-        ``node_id, ('node', node)`` OR
-        ``node_id, ('score', score)``
-        """
+        
         yield node_id, ('node', node)
 	
 	if 'links' in node:
@@ -37,11 +30,7 @@ class MRPageRank(MRJob):
 		        	yield dest_id, ('score', node['score'] * weight)
 
     def reduce_task(self, node_id, typed_values):
-        """Reducer: Combine scores sent from other nodes, and update this node
-        (creating it if necessary).
-
-        Store information about the node's previous score in *prev_score*.
-        """
+       
         node = {}
         total_score = 0
 	prevScoreSet=False
